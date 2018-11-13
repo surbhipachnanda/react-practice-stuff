@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fetch Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    
+</head>
+<body>
+    <button id="Objects">Total Objects</button>
+    <button id="Email">Alt EMail</button>
+    <button id="BodyText">Random Body</button>
+    <div id="output"></div>
+    <script>
+        document.getElementById('Objects').addEventListener('click',obj);
+        document.getElementById('Email').addEventListener('click',email);
+        document.getElementById('BodyText').addEventListener('click',body_text);
+        
+        function obj(){
+            fetch('https://jsonplaceholder.typicode.com/comments')
+            .then((res)=>res.json())
+            .then((data)=>{
+                var value=0;
+                data.forEach(function(user){
+                    value+=1;
+                });
+                document.getElementById('output').innerHTML=value;
+            })
+            .catch((err)=>console.log(err))
+        }
+
+        function email(){
+            fetch('https://jsonplaceholder.typicode.com/comments')
+            .then((res)=>res.json())
+            .then((data)=>{
+                let output= '<h2>Email IDs</h2>';
+                for(i=0;data[i]!=null;i=i+2)
+                {
+                    console.log(data[i].id);
+                    output+= `
+                        <p> ${data[i].email}</p>
+                        `;
+                };
+                document.getElementById('output').innerHTML=output;
+            })
+        }
+        
+        function body_text(){
+            fetch('https://jsonplaceholder.typicode.com/comments')
+            .then((res)=>res.json())
+            .then((data)=>{
+                var n=Math.floor(Math.random()*500)+1;
+                console.log(data[n].id);
+                output=`<p>${data[n].body}</p>`;
+                document.getElementById('output').innerHTML=output;
+            })
+        }
+    </script>
+</body>
+</html>
