@@ -40,14 +40,30 @@ class Leaderboard extends Component {
                             <div className="content">
                                 {new Array(10).fill(0).map((_, i) => (
                                     <div className="details">    
+                                        <div className="rank">
+                                            <h3>{players[0].rank}</h3>
+                                        </div>
                                         <div className="image">
-                                            <img src={avatar} alt="" id="avatarimg" align="middle"/>
-                                        </div>         
-                                        <div className="name">
-                                            <h3>{players[0].name}</h3>
-                                        </div>     
+                                            <img src={avatar} alt="" id="avatarimg"/>
+                                        </div>            
                                         <div className="others">
-                                            <PlayerCard key={i} player={players[i % players.length]} />                                       
+                                            <div className="name">
+                                                <h3>{players[0].name}</h3>
+                                            </div> 
+                                            <div className="data">
+                                                <div className="data_item">
+                                                    <p>Score</p>
+                                                </div>
+                                                <div className="data_item">
+                                                    <p>College</p>
+                                                </div>
+                                                <div className="data_item">
+                                                    <p>{players[0].score}</p>
+                                                </div>
+                                                <div className="data_item">
+                                                    <p>{players[0].college}</p>
+                                                </div>
+                                            </div>                                     
                                         </div>       
                                     </div>
                                 ))} 
@@ -128,26 +144,59 @@ export default styled(Leaderboard)`
         
     }
     .details>*{
-        background:black;
+        
         margin: 10px;
     }
     .image{
-        width:20%;
+        width:20%;  Q   
         align-self:center;
-        
-  
     }
     #avatarimg{
         height: 100px;
-        border-radius: 50%;
+        border-radius: 50%;  
+        display:block; 
+        margin-right:auto;
+        margin-left:auto;
+    }
+    .rank{
+        width:10%;
+        position:relative;
+
        
+    }
+    .rank>h3{
+        text-align: center;
+        margin:0;
+        position:absolute;
+        top:50%;
+        width:100%;
+        -ms-transform:translateY(-50%);
+        transform:translateY(-50%);
+        color: #fff;
+        font-size: 2.4em;
+        font-weight: 600;
+        text-border:red;
         
     }
-    .name{
-        width:30%;
-    }
     .others{
+        width:70%;
+        display:flex;
+        flex-direction: column;
+    }
+    .name{
+        height:60%;
+    }
+    .data{
+        height:40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        
+    }
+    .data_item{
         width:50%;
+        
     }
     
         
