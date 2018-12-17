@@ -5,17 +5,63 @@ import {NavLink} from 'react-router-dom';
 import { PlayerCard } from'components';
 import {  avatar } from 'assets';
 
+const colors = ['#7982d7','#b85fa1','#f8b06a' , '#71b1e6', '#f7e9a6', '#7cdbde'];
+
+ 
 const players =[
     {
+
         name: 'Sherlock Holmes',
         rank: '1',
-        college: 'BakersStreet',
+        organization: 'BakersStreet',
         score: '221'
     },
     {
         name: 'James Bond',
         rank: '2',
-        college: 'EnglandDuh',
+        organization: 'EnglandDuh',
+        score: '007'
+    },
+    {
+        name: 'James Bond',
+        rank: '3',
+        organization: 'EnglandDuh',
+        score: '007'
+    },
+    {
+        name: 'James Bond',
+        rank: '4',
+        organization: 'EnglandDuh',
+        score: '007'
+    },
+    {
+        name: 'James Bond',
+        rank: '5',
+        organization: 'EnglandDuh',
+        score: '007'
+    },
+    {
+        name: 'James Bond',
+        rank: '6',
+        organization: 'EnglandDuh',
+        score: '007'
+    },
+    {
+        name: 'James Bond',
+        rank: '7',
+        organization: 'EnglandDuh',
+        score: '007'
+    },
+    {
+        name: 'James Bond',
+        rank: '8',
+        organization: 'EnglandDuh',
+        score: '007'
+    },
+    {
+        name: 'James Bond',
+        rank: '9',
+        organization: 'EnglandDuh',
         score: '007'
     }
 ];
@@ -38,34 +84,8 @@ class Leaderboard extends Component {
                             <h1>Leaderboard</h1>
                             </div>
                             <div className="content">
-                                {new Array(10).fill(0).map((_, i) => (
-                                    <div className="details">    
-                                        <div className="rank">
-                                            <h3>{players[0].rank}</h3>
-                                        </div>
-                                        <div className="image">
-                                            <img src={avatar} alt="" id="avatarimg"/>
-                                        </div>            
-                                        <div className="others">
-                                            <div className="name">
-                                                <h3>{players[0].name}</h3>
-                                            </div> 
-                                            <div className="data">
-                                                <div className="data_item">
-                                                    <p>Score</p>
-                                                </div>
-                                                <div className="data_item">
-                                                    <p>College</p>
-                                                </div>
-                                                <div className="data_item">
-                                                    <p>{players[0].score}</p>
-                                                </div>
-                                                <div className="data_item">
-                                                    <p>{players[0].college}</p>
-                                                </div>
-                                            </div>                                     
-                                        </div>       
-                                    </div>
+                                {new Array(players.length).fill(0).map((_, i) => (
+                                    <PlayerCard key={i} player={players[i % players.length]} color={colors[i%colors.length]} />
                                 ))} 
                             </div>
                         </div>
@@ -148,16 +168,31 @@ export default styled(Leaderboard)`
         margin: 10px;
     }
     .image{
-        width:20%;  Q   
+        border-radius: 50%; 
         align-self:center;
+        border: 2px solid ${colors[0]};
+        position:relative; 
+        border-width:thick;
+       
+        
     }
-    #avatarimg{
-        height: 100px;
-        border-radius: 50%;  
-        display:block; 
-        margin-right:auto;
-        margin-left:auto;
+    .avatarimg{
+        height: 70px;
+        border-radius: 50%; 
+        padding:3px; 
     }
+    
+    // .image::after{
+    //     content:"";
+    //     position:absolute;
+    //     border-radius: 50%; 
+    //     top:-10px;
+    //     left:-10px;
+    //     right:-10px;
+    //     bottom:-10px;
+    //     border:2px solid ${colors[0]};
+    //     border-width:thick;
+    // }
     .rank{
         width:10%;
         position:relative;
@@ -175,7 +210,7 @@ export default styled(Leaderboard)`
         color: #fff;
         font-size: 2.4em;
         font-weight: 600;
-        text-border:red;
+        
         
     }
     .others{
@@ -184,7 +219,11 @@ export default styled(Leaderboard)`
         flex-direction: column;
     }
     .name{
-        height:60%;
+       
+        color: #fff;
+		font-size: 1em;
+        text-transform: uppercase;
+       
     }
     .data{
         height:40%;
@@ -194,8 +233,19 @@ export default styled(Leaderboard)`
         flex-wrap:wrap;
         
     }
-    .data_item{
+    .data>*{
         width:50%;
+    }
+    .data_item{
+        color: #fff;
+		font-size: 0.7em;
+		text-align: left;
+        height: 20px;
+        
+        
+    }
+    .header{
+        color:#6a93ff;
         
     }
     
