@@ -15,11 +15,11 @@ class PlayerCard extends Component{
 					<h3>{this.props.player.rank}</h3>
 				</div>
 				<div className="image">
-					<img src={avatar} alt="" className="avatarimg"/>
+					<img src={avatar} alt="" id="avatarimg"/>
 				</div>            
 				<div className="others">
 					<div className="name">
-						<h3>{this.props.player.name}</h3>
+						<h4>{this.props.player.name}</h4>
 					</div> 
 					<div className="data">
 						<div className="header">
@@ -45,44 +45,39 @@ class PlayerCard extends Component{
 export default styled(PlayerCard)`
 	display:flex;
         flex-direction: row;
-        justify-content: space-between;
-        
+        justify-content: space-around;
         color:#dfdfe7;
         font-size:1.3em;
         font-weight:700;
         line-height:1;
         padding:10px;
-        margin:20px 0 20px 0;
-        background:#2f2e4d;
+        // margin:20px 0 20px 0;
+        background:${({joined }) => ((joined===0) ? '#2f2e4d' : '#2f2f4k')};;
 		transition:0.2s;
 		text-transform: uppercase;
 
         
     .details>*{
-        
         margin: 10px;
     }
     .image{
-        border-radius: 50%; 
-        align-self:center;
-        border: 2px solid ${({color }) => (color)};
-        position:relative; 
-		border-width:thick;
-		box-shadow:2px 2px 40px black;
+		border-radius: 50%; 
+		
 	}
 
-    .avatarimg{
+    #avatarimg{
         height: 70px;
         border-radius: 50%; 
 		padding:3px; 
+		align:middle;
+		margin-top:5px;
+		border: 2px solid ${({color }) => (color)};
+		border-width:thick;
 		
     }
    
-    .rank{
-        width:10%;
+	.rank{
         position:relative;
-
-       
     }
     .rank>h3{
         text-align: center;
@@ -96,19 +91,23 @@ export default styled(PlayerCard)`
         font-size: 2.4em;
         font-weight: 600;
         
-        
     }
     .others{
         width:70%;
         display:flex;
         flex-direction: column;
-    }
-    .name{
-       
+	}
+	.name{
+		margin-top:2px;
+	}
+    .name>h4{
         color: #fff;
 		font-size: 1em;
-        
-       
+		font-weight: 500;margin-top:9px;
+	}
+	  
+    .data>*{
+        width:50%;
     }
     .data{
         height:40%;
@@ -116,22 +115,22 @@ export default styled(PlayerCard)`
         flex-direction: row;
         justify-content: space-around;
         flex-wrap:wrap;
-        
-    }
-    .data>*{
-		
-		
-    }
+        width:45%;
+	}
+	
     .data_item{
         color: #fff;
-		font-size: 0.7em;
+		font-size: 0.9em;
 		text-align: left;
-        height: 20px;
+		height: 20px;
+		font-weight:600;
+		margin-top:1px;
+		text-transform: capitalize;
     }
     .header{
-		color:#6a93ff;
+		color:#939393;
 		font-weight:400;
-		font-size:0.8em;
+		font-size:0.6em;
 		margin-top:5px;
         
     }

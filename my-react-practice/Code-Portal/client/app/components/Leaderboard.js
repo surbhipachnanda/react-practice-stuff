@@ -85,7 +85,7 @@ class Leaderboard extends Component {
                             </div>
                             <div className="content">
                                 {new Array(players.length).fill(0).map((_, i) => (
-                                    <PlayerCard key={i} player={players[i % players.length]} color={colors[i%colors.length]} />
+                                    <PlayerCard key={i} player={players[i % players.length]} color={colors[i%colors.length]} joined={i%2} />
                                 ))} 
                             </div>
                         </div>
@@ -147,114 +147,7 @@ export default styled(Leaderboard)`
         font-weight:400;
         font-size:0.7em;
     }
-    .details{
-       
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        
-        color:#dfdfe7;
-        font-size:1.3em;
-        font-weight:700;
-        line-height:1;
-        padding:10px;
-        margin:20px 0 20px 0;
-        background:#2f2e4d;
-        transition:0.2s;
-        
-    }
-    .details>*{
-        
-        margin: 10px;
-    }
-    .image{
-        border-radius: 50%; 
-        align-self:center;
-        border: 2px solid ${colors[0]};
-        position:relative; 
-        border-width:thick;
-       
-        
-    }
-    .avatarimg{
-        height: 70px;
-        border-radius: 50%; 
-        padding:3px; 
-    }
-    
-    // .image::after{
-    //     content:"";
-    //     position:absolute;
-    //     border-radius: 50%; 
-    //     top:-10px;
-    //     left:-10px;
-    //     right:-10px;
-    //     bottom:-10px;
-    //     border:2px solid ${colors[0]};
-    //     border-width:thick;
-    // }
-    .rank{
-        width:10%;
-        position:relative;
 
-       
-    }
-    .rank>h3{
-        text-align: center;
-        margin:0;
-        position:absolute;
-        top:50%;
-        width:100%;
-        -ms-transform:translateY(-50%);
-        transform:translateY(-50%);
-        color: #fff;
-        font-size: 2.4em;
-        font-weight: 600;
-        
-        
-    }
-    .others{
-        width:70%;
-        display:flex;
-        flex-direction: column;
-    }
-    .name{
-       
-        color: #fff;
-		font-size: 1em;
-        text-transform: uppercase;
-       
-    }
-    .data{
-        height:40%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap:wrap;
-        
-    }
-    .data>*{
-        width:50%;
-    }
-    .data_item{
-        color: #fff;
-		font-size: 0.7em;
-		text-align: left;
-        height: 20px;
-        
-        
-    }
-    .header{
-        color:#6a93ff;
-        
-    }
-    
-        
-  
-    .details:hover{
-        color:#fff;
-        background:#363559;
-    }
     .container{
         
         border-radius: 6px;
