@@ -60,18 +60,17 @@ export default styled(PlayerCard)`
     }
     .image{
 		border-radius: 50%; 
-		margin:0 25px 0 50px;
+		margin:0 25px 0 80px;
 	}
 
     #avatarimg{
         height: 70px;
         border-radius: 50%; 
-		padding:3px; 
+		padding: 2.5px 3px 4px 3px; 
 		align:middle;
 		margin-top:5px;
-		border: 2px solid ${({color }) => (color)};
-		border-width:thick;
-		
+		border: 3px solid ${({color }) => (color)};
+				
     }
    
 	.rank{
@@ -86,17 +85,19 @@ export default styled(PlayerCard)`
         -ms-transform:translateY(-50%);
         transform:translateY(-50%);
         color: #fff;
-        font-size: 2em;
+        font-size: 1.8em;
         font-weight: 600;
         
     }
     .others{
         width:70%;
-        display:flex;
+		display:flex;
+		padding:5px;
         flex-direction: column;
 	}
 	.name{
 		margin-top:2px;
+		letter-spacing: 2px;
 	}
     .name>h4{
         color: #fff;
@@ -113,7 +114,8 @@ export default styled(PlayerCard)`
         flex-direction: row;
         justify-content: space-around;
         flex-wrap:wrap;
-        width:45%;
+		width:45%;
+		padding-top:5px;
 	}
 	
     .data_item{
@@ -121,16 +123,16 @@ export default styled(PlayerCard)`
 		font-size: 0.7em;
 		text-align: left;
 		height: 20px;
-		font-weight:600;
+		font-weight:400;
 		margin-top:1px;
 		text-transform: capitalize;
     }
     .header{
 		color:#939393;
-		font-weight:400;
+		font-weight:600;
 		font-size:0.5em;
 		margin-top:5px;
-        
+        margin-bottom: 2px;
     }
     
         

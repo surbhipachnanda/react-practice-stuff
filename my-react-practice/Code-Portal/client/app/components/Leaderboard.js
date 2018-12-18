@@ -113,10 +113,10 @@ class Leaderboard extends Component {
 }
 export default styled(Leaderboard)`
 
-.stats{
-    width:400px;
-    height: 400px;
-    border-radius: 6px;
+    .stats{
+        width:400px;
+        height: 400px;
+        border-radius: 6px;
         background: #2f2f4b; /* Old browsers */
         background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #26263e 100%); /* FF3.6-15 */
         background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#26263e 100%); /* Chrome10-25,Safari5.1-6 */
@@ -124,11 +124,13 @@ export default styled(Leaderboard)`
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
         border:none;
         filter: drop-shadow(0 0 0.95rem #1f2032);
-}
-        .details{
-            font-weight:400;
-            font-size:0.7em;
-        }
+        margin-right:0px;
+    }
+    .details{
+        font-weight:400;
+        font-size:0.7em;
+    }
+
     > h3 {
 		color: #fff;
 		font-size: 1.4em;
@@ -136,7 +138,7 @@ export default styled(Leaderboard)`
 	}
     .area{
         margin-top:30px;
-        padding-right:100px;
+        padding-right:30px;
         display:flex;
         justify-content : space-between;
         flex-direction:row;
@@ -172,7 +174,7 @@ export default styled(Leaderboard)`
         background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#26263e 100%); /* Chrome10-25,Safari5.1-6 */
         background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
-        width:50%;
+        width:60%;
        
       
         border:none;
@@ -183,7 +185,7 @@ export default styled(Leaderboard)`
     .heading{
         z-index: 1;
         position: sticky;
-	top: 0;
+	    top: 0;
         filter: drop-shadow(0px 5px 5px #282840);
         border-radius: 6px 6px 0 0;
         height:55px;
