@@ -5,9 +5,7 @@ import {  avatar } from 'assets';
 
 
 class PlayerCard extends Component{
-	componentDidMount() {
-		console.log(this.props.color)
-	}
+	
 	render() {
 		return (
 			<div className={this.props.className}>    
@@ -62,7 +60,7 @@ export default styled(PlayerCard)`
     }
     .image{
 		border-radius: 50%; 
-		
+		margin:0 25px 0 50px;
 	}
 
     #avatarimg{
@@ -81,14 +79,14 @@ export default styled(PlayerCard)`
     }
     .rank>h3{
         text-align: center;
-        margin:0;
+        margin:0 10px 0 10px;
         position:absolute;
         top:50%;
         width:100%;
         -ms-transform:translateY(-50%);
         transform:translateY(-50%);
         color: #fff;
-        font-size: 2.4em;
+        font-size: 2em;
         font-weight: 600;
         
     }
@@ -102,7 +100,7 @@ export default styled(PlayerCard)`
 	}
     .name>h4{
         color: #fff;
-		font-size: 1em;
+		font-size: 0.8em;
 		font-weight: 500;margin-top:9px;
 	}
 	  
@@ -120,7 +118,7 @@ export default styled(PlayerCard)`
 	
     .data_item{
         color: #fff;
-		font-size: 0.9em;
+		font-size: 0.7em;
 		text-align: left;
 		height: 20px;
 		font-weight:600;
@@ -130,7 +128,7 @@ export default styled(PlayerCard)`
     .header{
 		color:#939393;
 		font-weight:400;
-		font-size:0.6em;
+		font-size:0.5em;
 		margin-top:5px;
         
     }

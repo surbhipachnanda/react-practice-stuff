@@ -76,6 +76,8 @@ class Leaderboard extends Component {
                         <NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
                         <span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
                         <NavLink to="/questions"><span className="navigation">101 Hack 55</span></NavLink>
+                        <span className="navigation1">&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+                        <NavLink to="/leaderboard"><span className="navigation">Leaderboard</span></NavLink>
                     </div>
 
                     <div className="area">
@@ -89,17 +91,31 @@ class Leaderboard extends Component {
                                 ))} 
                             </div>
                         </div>
+                    <div className="stats">
+                        <div className="heading1">
+                            <span id="rank"><strong>Your Profile</strong></span> 
+                        </div>
+                        <div className="otherstat">
+                            <div className="box">
+                                <img src={avatar} alt="" id="avatar"/>
+                            </div>
+                            <div className="lead">
+                                {/* Leaderboard */}
+                            </div>
+                        </div>
                     </div>
+                    </div>
+                    
                 </Content>
             </div>
-        )
+        );
     }
 }
 export default styled(Leaderboard)`
 
 .stats{
-    width:300px;
-    height: 300px;
+    width:400px;
+    height: 400px;
     border-radius: 6px;
         background: #2f2f4b; /* Old browsers */
         background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #26263e 100%); /* FF3.6-15 */
@@ -156,7 +172,7 @@ export default styled(Leaderboard)`
         background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#26263e 100%); /* Chrome10-25,Safari5.1-6 */
         background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
-        width:60%;
+        width:50%;
        
       
         border:none;
@@ -210,41 +226,55 @@ export default styled(Leaderboard)`
         height:35px;
     }
     .box{
-        border-radius:6px;
-        text-align:center;
-        height:45px;
-        filter: drop-shadow(2px 5px 5px #282840);
-        width:45px;
-        background:#249ec7;
+       
+        border-radius: 50%; 
         transition:0.3s;
-        svg{
-            path{
-                fill:#fff;
-            }
-        }
+        border: 2px solid white;
+        border-width:thick;
+        // background:green;
+        width:25%;
+        padding:10px;
+        margin-left:30px;
+        position:relative;
+        height: 100px;
+        
     }
+
+    #avatar{
+        height: 90px;
+        border-radius: 50%; 
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+      
+    }
+
     .box:hover{
         filter: drop-shadow(0px 0px 8px #1b1b2c);
         cursor:pointer;
-        border-radius:46px;
+        border-radius:50%;
         border: 1px solid white;
-        // background:#249ec7;
+       
     }
     .otherstat{
-        line-height:50px;
+        display:flex;
         flex-dirextion:row;
         flex-wrap:wrap;
-        padding-right:90px;
-        margin:20px;
+        // justify-content:space-around;
+        line-height:50px;
+        // padding-right:90px;
+        margin:20px 0 0 0;
         position:relative;
-        display:flex;
-        justify-content:space-between;
     }
-    #lead{
+    .lead{
+        width: 60%;
         color: #d7d7ef;
         font-weight:600;
         font-size:1.2em;
         line-height:2;
+        // background:red;
+        padding:10px;
     }
     .beauty{
         bottom:85px;
