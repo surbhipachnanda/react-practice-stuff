@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import {Button, Content} from 'components';
 import {NavLink} from 'react-router-dom';
 import { PlayerCard } from'components';
@@ -100,7 +100,7 @@ class Leaderboard extends Component {
                                 <img src={avatar} alt="" id="avatar"/>
                             </div>
                             <div className="lead">
-                                {/* Leaderboard */}
+                                Leaderboard
                             </div>
                         </div>
                     </div>
@@ -111,6 +111,40 @@ class Leaderboard extends Component {
         );
     }
 }
+var check = keyframes`
+0%{
+    transform: translateY(-30px);
+    opacity:0;
+}
+100%{
+    transform: translateY(0px);
+    opacity:1;
+
+}
+`;
+var check1 = keyframes`
+0%{
+    transform: translateY(30px);
+    opacity:0;
+}
+100%{
+    transform: translateY(0px);
+    opacity:1;
+
+}
+`;
+var Gradient = keyframes`
+0% {
+    background-position: 0% 50%
+}
+50% {
+    background-position: 100% 50%
+}
+100% {
+    background-position: 0% 50%
+}
+`;
+
 export default styled(Leaderboard)`
 
     .stats{
@@ -125,6 +159,7 @@ export default styled(Leaderboard)`
         border:none;
         filter: drop-shadow(0 0 0.95rem #1f2032);
         margin-right:0px;
+        animation: ${check1} 2s ease 1;
     }
     .details{
         font-weight:400;
@@ -133,7 +168,7 @@ export default styled(Leaderboard)`
 
     > h3 {
 		color: #fff;
-		font-size: 1.4em;
+		font-size: 1..,,,,,,,,,,,.4em;
 		font-weight: 600;
 	}
     .area{
@@ -177,6 +212,7 @@ export default styled(Leaderboard)`
         width:60%;
        
       
+        animation: ${check} 2s ease 1;
         border:none;
         filter: drop-shadow(0 0 0.95rem #1f2032);
     }
@@ -194,6 +230,8 @@ export default styled(Leaderboard)`
         background: -webkit-linear-gradient(45deg, #fd6b9a 9%,#f77f6e 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(45deg, #fd6b9a 9%,#f77f6e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd6b9a', endColorstr='#f77f6e',GradientType=1 );
+        animation: ${Gradient} 3s ease infinite;
+
     }
     .heading1{
         text-align:center;
@@ -205,6 +243,7 @@ export default styled(Leaderboard)`
         background: -webkit-linear-gradient(45deg, #249ec7 9%,#4cd0c5 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(45deg, #249ec7 9%,#4cd0c5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#249ec7', endColorstr='#4cd0c5',GradientType=1 );
+        animation: ${Gradient} 3s ease infinite;
     }
     h1{
         line-height:55px;
