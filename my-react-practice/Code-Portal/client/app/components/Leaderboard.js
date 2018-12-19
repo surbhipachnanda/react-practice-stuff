@@ -100,7 +100,12 @@ class Leaderboard extends Component {
                                 <img src={avatar} alt="" id="avatar"/>
                             </div>
                             <div className="lead">
-                                Leaderboard
+                                <p id="profile">Name</p>
+                                <p id="profile">Email Address</p>
+                                <p id="profile">Organization</p>
+                                <p id="profile">Score</p>
+                                <p id="profile">Rank</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -315,7 +320,8 @@ export default styled(Leaderboard)`
         font-size:1.2em;
         line-height:2;
         // background:red;
-        padding:10px;
+        padding:20px;
+        padding-top:0;
     }
     .beauty{
         bottom:85px;
