@@ -13,8 +13,10 @@ import {
 	Footer,
 	Submission,
 	Questions,
-	Leaderboard
+	Leaderboard,
+	Registeration
 } from 'components';
+
 
 
 const question = {
@@ -48,7 +50,7 @@ class App extends Component {
 				<BrowserRouter>
 					<div className={this.props.className}>
 					
-						<Navbar />
+						
 						{/* <Sidebar /> */}
 						<Switch>
 							<Route
@@ -71,6 +73,10 @@ class App extends Component {
 							<Route 
 								path="/leaderboard"
 								component={()=> <Leaderboard />}
+							/>
+							<Route 
+								path="/registeration"
+								component={()=> <Registeration />}
 							/>
 						</Switch>
 						

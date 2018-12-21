@@ -9,7 +9,9 @@ const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 	}
-
+	html{
+		background-color:#222437;
+	}
 	body {
 		background: #2b2b46; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover, #2b2b46 9%, #232438 53%, #222437 100%); /* FF3.6-15 */

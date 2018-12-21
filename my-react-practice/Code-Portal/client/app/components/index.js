@@ -22,3 +22,5 @@ export { default as Questions } from './Questions';
 export { default as Gauge } from './Gauge';
 export { default as Leaderboard} from './Leaderboard';
 export { default as PlayerCard} from './PlayerCard';
+export { default as Registeration} from './Registeration';
+export { default as Registerationbox} from './Registerationbox';

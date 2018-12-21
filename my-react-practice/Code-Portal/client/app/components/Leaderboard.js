@@ -4,6 +4,7 @@ import {Button, Content} from 'components';
 import {NavLink} from 'react-router-dom';
 import { PlayerCard } from'components';
 import {  avatar } from 'assets';
+import {Navbar} from 'components';
 
 const colors = ['#7982d7','#b85fa1','#f8b06a' , '#71b1e6', '#f7e9a6', '#7cdbde'];
 
@@ -70,7 +71,7 @@ class Leaderboard extends Component {
     render() {
         return(
             <div className={this.props.className}>
-            
+                <Navbar />
                 <Content>
                     <div>
                         <NavLink to="/contests"><span className="navigation">All Contests</span></NavLink>
@@ -96,17 +97,26 @@ class Leaderboard extends Component {
                             <span id="rank"><strong>Your Profile</strong></span> 
                         </div>
                         <div className="otherstat">
+                            
+                            <div className="lead">
+                                <p>Sherlock Holmes</p>
+                            </div>
                             <div className="box">
                                 <img src={avatar} alt="" id="avatar"/>
                             </div>
-                            <div className="lead">
-                                <p id="profile">Name</p>
-                                <p id="profile">Email Address</p>
-                                <p id="profile">Organization</p>
-                                <p id="profile">Score</p>
-                                <p id="profile">Rank</p>
-                                
+                            <div className="profile_details">
+                                <p>Score</p>
                             </div>
+                            <div className="profile_details">
+                                <p>Rank</p>
+                            </div>
+                            <div className="values">
+                                <p>221</p>
+                            </div>
+                            <div className="values">
+                                <p>1</p>
+                            </div>
+
                         </div>
                     </div>
                     </div>
@@ -173,15 +183,16 @@ export default styled(Leaderboard)`
 
     > h3 {
 		color: #fff;
-		font-size: 1..,,,,,,,,,,,.4em;
+		font-size: 1.4em;
 		font-weight: 600;
 	}
     .area{
         margin-top:30px;
         padding-right:30px;
         display:flex;
-        justify-content : space-between;
+        justify-content :space-between;
         flex-direction:row;
+
     }
     
 
@@ -215,8 +226,6 @@ export default styled(Leaderboard)`
         background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
         width:60%;
-       
-      
         animation: ${check} 2s ease 1;
         border:none;
         filter: drop-shadow(0 0 0.95rem #1f2032);
@@ -317,11 +326,34 @@ export default styled(Leaderboard)`
         width: 60%;
         color: #d7d7ef;
         font-weight:600;
-        font-size:1.2em;
-        line-height:2;
+        font-size:1.3em;
+        height:100px;
+        line-height:100px;
         // background:red;
         padding:20px;
         padding-top:0;
+        top:50%;
+        bottom:50%;
+        text-align:center;
+        text-transform:uppercase;
+    }
+    .profile_details{
+        width:50%;
+        // background:red;
+        padding:20px;
+        text-align:center;
+        font-weight:500;
+        font-size:1.2em;
+        color:#939393;
+        height:50px;
+    }
+    .values{
+        width:50%;
+        padding:20px;
+        text-align:center;
+        font-weight:700;
+        font-size:2em;
+        color:#d7d7ef;
     }
     .beauty{
         bottom:85px;
