@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import styled, {keyframes} from 'styled-components';
-import {Button, Content} from 'components';
+import {Button, Content,Navbar,PlayerCard} from 'components';
 import {NavLink} from 'react-router-dom';
-import { PlayerCard } from'components';
-import {  avatar } from 'assets';
-import {Navbar} from 'components';
+import { avatar } from 'assets';
+
 
 const colors = ['#7982d7','#b85fa1','#f8b06a' , '#71b1e6', '#f7e9a6', '#7cdbde'];
 
@@ -99,10 +98,11 @@ class Leaderboard extends Component {
                         <div className="otherstat">
                             
                             <div className="lead">
-                                <p>Sherlock Holmes</p>
+                                    <p>Sherlock Holmes</p>
+                                    <p id="username">@SmartAss221</p>
                             </div>
                             <div className="box">
-                                <img src={avatar} alt="" id="avatar"/>
+                                <img src={avatar} alt="" id="myavatar"/>
                             </div>
                             <div className="profile_details">
                                 <p>Score</p>
@@ -288,14 +288,14 @@ export default styled(Leaderboard)`
         border-width:thick;
         // background:green;
         width:25%;
-        padding:10px;
-        margin-left:30px;
+        padding:5px;
+        margin-left:10px;
         position:relative;
         height: 100px;
         
     }
 
-    #avatar{
+    #myavatar{
         height: 90px;
         border-radius: 50%; 
         position:absolute;
@@ -316,26 +316,28 @@ export default styled(Leaderboard)`
         display:flex;
         flex-dirextion:row;
         flex-wrap:wrap;
-        // justify-content:space-around;
         line-height:50px;
-        // padding-right:90px;
         margin:20px 0 0 0;
-        position:relative;
     }
     .lead{
-        width: 60%;
+        width: 65%;
         color: #d7d7ef;
         font-weight:600;
-        font-size:1.3em;
+        font-size:1.2em;
         height:100px;
-        line-height:100px;
+        line-height:50px;
         // background:red;
-        padding:20px;
-        padding-top:0;
-        top:50%;
-        bottom:50%;
         text-align:center;
-        text-transform:uppercase;
+        text-transform:uppercase;  
+        letter-spacing: 2px;      
+    }
+   
+    .lead>#username{
+        letter-spacing: 0px;
+        font-weight:300;
+        font-size:0.8em;
+        text-transform:lowercase;
+        
     }
     .profile_details{
         width:50%;
