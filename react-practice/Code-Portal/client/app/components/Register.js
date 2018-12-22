@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import styled , {keyframes} from 'styled-components';
 import { iecselogo } from 'assets';
 import {
-	Loginbox
+	Registerbox
 } from 'components';
 import {NavLink} from 'react-router-dom';
-class Login extends Component {
+
+class Register extends Component {
     render() {
         return (
             <div className={this.props.className}>
@@ -13,14 +14,13 @@ class Login extends Component {
 						<img src={iecselogo} alt="" id="logoimg" />
 					</span>
                     <div className="alternative">
-                        <NavLink to="/register">
-                            <span>Create an Account</span>
+                        <NavLink to="/login">
+                            <span>Log In</span>
                         </NavLink>
-                       
                         <span>Recover Account</span>
                         <span id="google">Log in with Google</span>
                     </div>
-                    <Loginbox/>
+                    <Registerbox/>
                                     
             </div>
         );
@@ -50,7 +50,7 @@ const slide1 = keyframes`
 
 
 
-export default styled(Login)`
+export default styled(Register)`
     height:650px;
     #logo {
 		position: absolute;
@@ -92,9 +92,10 @@ export default styled(Login)`
             cursor:pointer;
             font-size:1em;
         }
+       
     }
     a{
-        text-decoration:none;
+        text-decoration: none;
     }
 
 

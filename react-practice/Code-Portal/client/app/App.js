@@ -15,7 +15,8 @@ import {
 	Questions,
 	Error,
 	Login,
-	Leaderboard
+	Leaderboard,
+	Register
 } from 'components';
 
 
@@ -82,6 +83,11 @@ class App extends Component {
 							<Route
 								path="/leaderboard"
 								component={() => <Leaderboard />}
+								exact
+							/>
+							<Route
+								path="/register"
+								component={()=> <Register />}
 								exact
 							/>
 							<Route
