@@ -16,7 +16,8 @@ import {
 	Error,
 	Login,
 	Leaderboard,
-	Register
+	Register,
+	Profile
 } from 'components';
 
 
@@ -88,6 +89,11 @@ class App extends Component {
 							<Route
 								path="/register"
 								component={()=> <Register />}
+								exact
+							/>
+							<Route
+								path="/profile"
+								component={()=> <Profile />}
 								exact
 							/>
 							<Route

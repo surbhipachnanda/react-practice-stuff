@@ -94,7 +94,9 @@ class Leaderboard extends Component {
                         </div>
                     <div className="stats">
                         <div className="heading1">
-                            <span id="rank"><strong>Your Profile</strong></span> 
+                            <NavLink to="/profile">
+                                <span id="rank"><strong>Your Profile</strong></span> 
+                            </NavLink>
                         </div>
                         <div className="otherstat">
                             

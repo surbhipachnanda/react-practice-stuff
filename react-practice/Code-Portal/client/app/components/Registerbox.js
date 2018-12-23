@@ -19,7 +19,7 @@ class Registerbox extends Component {
                     <input type="text" placeholder="Organization" className="organization" required/>
                     <input type="password" placeholder="Password" className="password" required/>
                     
-                    <Button><span>Log In</span></Button>
+                    <Button><span>Sign Up</span></Button>
                 </form>
                 <div className="beauty"><h1>User</h1></div>
                 </div>

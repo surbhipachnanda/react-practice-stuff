@@ -235,7 +235,8 @@ export default styled(Questions)`
         color:#fff;
         background:#363559;
     }
-    .container{
+    
+    border:none;.container{
         
         border-radius: 6px;
         background: #2f2f4b; /* Old browsers */
@@ -248,7 +249,6 @@ export default styled(Questions)`
         filter: drop-shadow(0 0 0.95rem #1f2032);
         animation: ${check} 2s ease 1;
     }
-    border:none;
 
     .heading{
         overflow:hidden;
