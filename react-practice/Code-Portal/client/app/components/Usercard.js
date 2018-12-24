@@ -20,31 +20,32 @@ class Usercard extends Component{
                         <p id="data">Registration No:  <span id="data-value">{this.props.user.regno}</span></p>
                     </div>
                 </div>
+
                 <div className="right_container">
                    <div className="features">
                         <p id="title">Ratings</p>
-                        <span class="sexy_line"></span>
+                        <span className="sexy_line"></span>
                         <p id="values">
                         Participate in your first rated contest to see your rating graph. 
                         </p>
                    </div>
                    <div className="features">
                         <p id="title">Submissions</p>
-                        <span class="sexy_line"></span>
+                        <span className="sexy_line"></span>
                         <p id="values">
                         You have not made any submissions yet.
                         </p>
                    </div>
                    <div className="features">
                         <p id="title">Contest History</p>
-                        <span class="sexy_line"></span>
+                        <span className="sexy_line"></span>
                         <p id="values">
                         You have not participated in any contests yet.
                         </p>
                    </div>
                    <div className="features">
                         <p id="title">Discussions</p>
-                        <span class="sexy_line"></span>
+                        <span className="sexy_line"></span>
                         <p id="values">
                         You don't have any discussions yet.
                         </p>
@@ -72,7 +73,7 @@ export default styled(Usercard)`
     
 
     .left_container{
-            
+    
         display:flex;
         flex-direction:column;
         border-radius: 10px;
@@ -104,6 +105,7 @@ export default styled(Usercard)`
         // background:yellow;
     }
     .box{
+        
         height:150px;
         position:relative;
         margin:10px;
@@ -112,6 +114,7 @@ export default styled(Usercard)`
         // border-radius:50%;
     }
     #myavatar{
+        
         height:150px;
         border-radius:50%;
         position:absolute;

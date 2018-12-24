@@ -55,7 +55,7 @@ var Gradient = keyframes`
 }
 `;
 var check = keyframes`
-0%{
+0% {
     transform: translateY(-30px);
     opacity:0;
 }
@@ -69,20 +69,20 @@ var check = keyframes`
 export default styled(Profile)`
     .content{
         animation: ${check} 2s ease 1;
-        overflow:hidden;
+        // overflow:hidden;
     }
     .area{
         background:#2f2e4d;
         border-radius:0 0 10px 10px;
         margin-right:20px;
-
+        
     }
 
     .heading{
         // width:300px;
         margin-right:20px;
         margin-top:10px;
-        z-index: 1;
+        z-index: 0;
         position: sticky;
         top: 0;
         overflow:hidden;
