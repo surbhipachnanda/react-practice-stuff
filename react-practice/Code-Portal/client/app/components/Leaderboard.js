@@ -300,7 +300,7 @@ export default styled(Leaderboard)`
        
         border-radius: 50%; 
         transition:0.3s;
-        border: 2px solid white;
+        // border: 2px solid white;
         border-width:thick;
         // background:green;
         width:25%;
@@ -318,6 +318,8 @@ export default styled(Leaderboard)`
         top:50%;
         left:50%;
         transform:translate(-50%,-50%);
+        border: 2.5px solid #7982d7;
+        padding:5px;
       
     }
 
@@ -332,7 +334,6 @@ export default styled(Leaderboard)`
         display:flex;
         flex-dirextion:row;
         flex-wrap:wrap;
-        line-height:50px;
         margin:20px 0 0 0;
     }
     .lead{
@@ -341,18 +342,22 @@ export default styled(Leaderboard)`
         font-weight:600;
         font-size:1.2em;
         height:100px;
-        line-height:50px;
+        line-height:100px;
         // background:red;
         text-align:center;
         text-transform:uppercase;  
         letter-spacing: 2px;      
     }
-   
+    .lead>*{
+        font-weight:400;
+    }
     .lead>#username{
+        margin:0;
         letter-spacing: 0px;
         font-weight:300;
         font-size:0.8em;
         text-transform:lowercase;
+        // background:yellow;
         
     }
     .profile_details{

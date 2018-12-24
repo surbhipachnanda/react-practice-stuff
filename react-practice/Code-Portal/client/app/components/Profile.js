@@ -69,6 +69,7 @@ var check = keyframes`
 export default styled(Profile)`
     .content{
         animation: ${check} 2s ease 1;
+        overflow:hidden;
     }
     .area{
         background:#2f2e4d;
@@ -89,10 +90,10 @@ export default styled(Profile)`
         border-radius: 6px 6px 0 0;
         height:55px;
         background: #EF3B36; /* Old browsers */
-        background: -moz-linear-gradient(45deg, #EF3B36 9%, #AB5757 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #EF3B36 9%,#AB5757 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #EF3B36 9%,#AB5757 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EF3B36', endColorstr='#AB5757',GradientType=1 );
+        background: -moz-linear-gradient(45deg, #EF3B36 9%, #fd1d1d 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #EF3B36 9%,#fd1d1d 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #EF3B36 9%,#fd1d1d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EF3B36', endColorstr='#fd1d1d',GradientType=1 );
         animation: ${Gradient} 3s ease infinite;
     }
     h1{

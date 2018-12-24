@@ -23,30 +23,30 @@ class Usercard extends Component{
                 <div className="right_container">
                    <div className="features">
                         <p id="title">Ratings</p>
-                        
+                        <span class="sexy_line"></span>
                         <p id="values">
-
+                        Participate in your first rated contest to see your rating graph. 
                         </p>
                    </div>
                    <div className="features">
                         <p id="title">Submissions</p>
-                        
+                        <span class="sexy_line"></span>
                         <p id="values">
-
+                        You have not made any submissions yet.
                         </p>
                    </div>
                    <div className="features">
                         <p id="title">Contest History</p>
-                        
+                        <span class="sexy_line"></span>
                         <p id="values">
-
+                        You have not participated in any contests yet.
                         </p>
                    </div>
                    <div className="features">
                         <p id="title">Discussions</p>
-                        
+                        <span class="sexy_line"></span>
                         <p id="values">
-
+                        You don't have any discussions yet.
                         </p>
                    </div>
                 </div>
@@ -79,7 +79,7 @@ export default styled(Usercard)`
         width:30%;
         border:none;
         // background:green;
-        // height:1000px;
+        height:400px;
         margin:30px;
         // margin-right:10px;
 
@@ -104,7 +104,7 @@ export default styled(Usercard)`
         // background:yellow;
     }
     .box{
-        height:250px;
+        height:150px;
         position:relative;
         margin:10px;
         margin-bottom:20px;
@@ -112,7 +112,7 @@ export default styled(Usercard)`
         // border-radius:50%;
     }
     #myavatar{
-        height:250px;
+        height:150px;
         border-radius:50%;
         position:absolute;
         top:50%;
@@ -165,17 +165,36 @@ export default styled(Usercard)`
         color:white;
     }
     .features{
-        height:100px;
+        height:150px;
     }
     #title{
         margin-bottom:0;
         // background:red;
         color:#DCDCDC;
         font-size:1.2em;
-        letter-spacing:3px;
+        font-weight:350;
+        letter-spacing:2px;
         text-transform:uppercase;
-        border-bottom: 1px solid white;
         padding-bottom:5px;
+    }
+    .sexy_line{ 
+        display:block;
+        border:none;
+        color:white;
+        height:1px;
+        background: white;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, white,transparent);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, white,transparent); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    #values{
+        border:1px dashed #939393;
+        height:50px;
+        margin:10px 0 10px 0;
+        color:#939393;
+        text-align:center;
+        line-height:50px;
+        font-weight:200;
     }
     
 
