@@ -84,7 +84,7 @@ class Leaderboard extends Component {
                         <div className="container">
                             <div className="heading">
                             <h1>Leaderboard</h1>
-                            <span className="fadebg1">Head</span>
+                            <span className="fadebg1">Lead</span>
                             </div>
                             <div className="content">
                                 {new Array(players.length).fill(0).map((_, i) => (
@@ -108,10 +108,10 @@ class Leaderboard extends Component {
                                 <img src={avatar} alt="" id="myavatar"/>
                             </div>
                             <div className="profile_details">
-                                <p>Score</p>
+                                <p>SCORE</p>
                             </div>
                             <div className="profile_details">
-                                <p>Rank</p>
+                                <p>RANK</p>
                             </div>
                             <div className="values">
                                 <p>221</p>
@@ -169,13 +169,9 @@ export default styled(Leaderboard)`
         width:400px;
         height: 400px;
         border-radius: 6px;
-        background: #2f2f4b; /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #26263e 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#26263e 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
+        background: #202942;
         border:none;
-        filter: drop-shadow(0 0 0.95rem #1f2032);
+        filter: drop-shadow(0px 15px 15px #181e30);
         margin-right:0px;
         animation: ${check1} 2s ease 1;
     }
@@ -221,7 +217,7 @@ export default styled(Leaderboard)`
     }
 
     .content{
-        filter: drop-shadow(0px 5px 5px #282840);
+        filter: drop-shadow(0px 15px 15px #181e30);
        
         
     }
@@ -234,31 +230,25 @@ export default styled(Leaderboard)`
     .container{
         
         border-radius: 6px;
-        background: #2f2f4b; /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover, #2f2f4b 9%, #26263e 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, #2f2f4b 9%,#26263e 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, #2f2f4b 9%,#26263e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f4b', endColorstr='#26263e',GradientType=1 );
+        background: #202942;
         width:60%;
         animation: ${check} 2s ease 1;
         border:none;
-        filter: drop-shadow(0 0 0.95rem #1f2032);
+        filter: drop-shadow(0px 15px 15px #181e30);
     }
     border:none;
 
     .heading{
         z-index: 1;
-        position: sticky;
         top: 0;
         overflow:hidden;
         filter: drop-shadow(0px 5px 5px #282840);
         border-radius: 6px 6px 0 0;
         height:55px;
         background: #f8b06a; /* Old browsers */
-        background: -moz-linear-gradient(45deg, #f8b06a 9%, #f7e9a6 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #f8b06a 9%,#f7e9a6 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #f8b06a 9%,#f7e9a6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8b06a', endColorstr='#f7e9a6',GradientType=1 );
+        background:linear-gradient(45deg, #f8b06a, #f7e9a6); /* FF3.6-15 */
+    
+        background-size: 400% 400%;
         animation: ${Gradient} 3s ease infinite;
 
     }
@@ -268,11 +258,8 @@ export default styled(Leaderboard)`
         
         border-radius: 6px 6px 0 0;
         height:55px;
-        background: #7cdbde; /* Old browsers */
-        background: -moz-linear-gradient(45deg, #7cdbde 9%, #71b1e6 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #7cdbde 9%,#71b1e6 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #7cdbde 9%,#71b1e6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cdbde', endColorstr='#71b1e6',GradientType=1 );
+        background: linear-gradient(45deg, #7cdbde 9%, #71b1e6 100%); /* FF3.6-15 */
+        background-size: 400% 400%;
         animation: ${Gradient} 3s ease infinite;
     }
     h1{
@@ -342,7 +329,7 @@ export default styled(Leaderboard)`
         font-weight:600;
         font-size:1.2em;
         height:100px;
-        line-height:100px;
+        line-height:40px;
         // background:red;
         text-align:center;
         text-transform:uppercase;  
@@ -361,13 +348,13 @@ export default styled(Leaderboard)`
         
     }
     .profile_details{
+        font-weight:600;
+		font-size:0.8em;
         width:50%;
         // background:red;
         padding:20px;
         text-align:center;
-        font-weight:500;
-        font-size:1.2em;
-        color:#939393;
+        color:#445076;
         height:50px;
     }
     .values{

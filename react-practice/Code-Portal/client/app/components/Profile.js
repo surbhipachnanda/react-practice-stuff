@@ -83,7 +83,7 @@ export default styled(Profile)`
         margin-right:20px;
         margin-top:10px;
         z-index: 0;
-        position: sticky;
+        // position: sticky;
         top: 0;
         overflow:hidden;
         filter: drop-shadow(0px 5px 5px #282840);

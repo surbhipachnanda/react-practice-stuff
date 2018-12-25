@@ -50,7 +50,7 @@ export default styled(PlayerCard)`
         line-height:1;
         padding:10px;
         // margin:20px 0 20px 0;
-        background:${({joined }) => ((joined===0) ? '#2f2e4d' : '#2f2f4k')};;
+        background:${({joined }) => ((joined===0) ? '#293453' : '#2f2f4k')};;
 		transition:0.2s;
 		text-transform: uppercase;
 
@@ -128,7 +128,7 @@ export default styled(PlayerCard)`
 		text-transform: capitalize;
     }
     .header{
-		color:#939393;
+		color:#445076;
 		font-weight:600;
 		font-size:0.5em;
 		margin-top:5px;

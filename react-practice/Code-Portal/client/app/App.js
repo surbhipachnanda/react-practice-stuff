@@ -16,10 +16,8 @@ import {
 	Error,
 	Login,
 	Leaderboard,
-	Register,
 	Profile
 } from 'components';
-
 
 const question = {
 	title: 'Bon Appétit',
@@ -87,13 +85,8 @@ class App extends Component {
 								exact
 							/>
 							<Route
-								path="/register"
-								component={()=> <Register />}
-								exact
-							/>
-							<Route
 								path="/profile"
-								component={()=> <Profile />}
+								component={() => <Profile />}
 								exact
 							/>
 							<Route
