@@ -29,43 +29,35 @@ class Registerbox extends Component {
                     <span id="portal">Portal</span>
                     </div><div className="login1">Create a new account</div></h2>
                             <form action="">
-                                <div className="data-box">
-                                    <div className="left-container">
-                                        <div className="input-container">
-                                            <i className="fa fa-user icon"></i>
-                                            <input type="text" placeholder="Name" className="name" required/>
-                                        </div>
-                                        <div className="input-container">
-                                            <i className="fa fa-user-plus icon"></i>
-                                            <input type="text" placeholder="Username" className="name" required/>
-                                        </div>
-                                        <div className="input-container">
-                                            <i className="fa fa-envelope icon"></i>
-                                            <input type="text" placeholder="Email" className="email" required/>
-                                        </div>
-                                    </div>
-                                    <div className="right-container">
-                                         <div className="image-container">
-                                            <input type="file" placeholder="Image" className="image" align="bottom" required/>
-                                        </div>
-                                    </div>
+                                
+                                <div className="input-container">
+                                    <i className="fa fa-user icon"></i>
+                                    <input type="text" placeholder="Name" className="name" required/>
                                 </div>
-                                <div className="data">
-                                    <div className="input-container2">
-                                        <i className="fa fa-briefcase icon"></i>
-                                        <input type="text" placeholder="Organization" className="organization" required/>
-                                    </div>
+                                <div className="input-container">
+                                    <i className="fa fa-user-plus icon"></i>
+                                    <input type="text" placeholder="Username" className="name" required/>
                                 </div>
-                                <div className="data">
-                                    <div className="input-container2">
-                                        <i className="fa fa-key icon"></i>
-                                        <input type="password" placeholder="Password" className="password" required/>
-                                    </div>
+                                <div className="input-container">
+                                    <i className="fa fa-envelope icon"></i>
+                                    <input type="text" placeholder="Email" className="email" required/>
                                 </div>
-
-                                <div className="data">  
-                                    <Button><span>Sign Up</span></Button>
+                                   
+                            
+                                <div className="input-container">
+                                    <i className="fa fa-briefcase icon"></i>
+                                    <input type="text" placeholder="Organization" className="organization" required/>
                                 </div>
+                              
+                           
+                                <div className="input-container">
+                                    <i className="fa fa-key icon"></i>
+                                    <input type="password" placeholder="Password" className="password" required/>
+                                </div>
+                        
+                        
+                                <Button><span>Sign Up</span></Button>
+                
                                 
                             </form>
                         <div className="beauty"><h1>User</h1></div>
@@ -111,25 +103,9 @@ overflow: hidden;
     background: #202942; /* Old browsers */
          
 }
-form{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    // background:yellow;
-    
-}
-.data-box{
-    
-    width:100%;
-    display:flex;
-    flex-direction:row;
-}
-.data{
-    // background:red;
-    width:100%;
-}
+
 .login1{
-    font-size:0.6em;
+    font-size:0.4em;
     font-weight:400;
     letter-spacing:3px;
     color:#dfdfe7;
@@ -146,41 +122,12 @@ form{
     margin-top:20px;
     display:flex;
     flex-direction:row;
-    // width:100%;
-    // background:red;
-    height:35px;
-    
-   
-}
-.image-container{
-    margin-top:20px;
-    margin-left:10px;
-    display:flex;
-    flex-direction:row;
-   
-    width:200px;
-    background-opacity:0.5;
-    text-align:center;
-    
-}
-.left-container{
-    // background:green;
-    width:60%;
-}
-.right-container{
-    // background:yellow;
-    width:40%;
-}
-.input-container2{
-    margin-left:65px;
-    margin-top:20px;
-    display:flex;
-    flex-direction:row;
     width:85%;
-    // background:yellow;
-    height:35px;
-    background-opacity:0.5;
+    // background:red;
+    height:35px; 
 }
+
+
 .icon {
     padding: 10px;
     color: white;
@@ -190,11 +137,8 @@ form{
     margin-right:5px;
     border-radius:4px;
 }
-input[type=file]{
-    // background:red;
-    height:145px;
-}
-.email,.password,.name,.organization,.image{
+
+.email,.password,.name,.organization{
     
     padding:10px;
     outline: none;
