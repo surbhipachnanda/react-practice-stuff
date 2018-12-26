@@ -10,27 +10,28 @@ class Loginbox extends Component {
             <div className={this.props.className}>
 
                 <div className="container">
-                <div className="hello">
+                    <div className="hello">
 
-                </div>
-                <div className="hello1">
+                    </div>
+                    <div className="hello1">
 
-                </div>
-                <div className="hello2">
+                    </div>
+                    <div className="hello2">
 
-                </div>
-                <div className="hello3">
+                    </div>
+                    <div className="hello3">
 
-                </div>
-                <div className="hello4">
-            </div> 
-                <h2>   <div className="login2">CodePortal</div>  <div className="login1">Sign into your account.</div></h2>
-                <form action="">
-                <input type="text" placeholder="Email Address" className="email" required/>
-                <input type="password" placeholder="Password" className="password" required/>
-                <Button><span>Sign In</span></Button>
-                </form>
-                <div className="beauty"><h1>User</h1></div>
+                    </div>
+                    <div className="hello4">
+
+                    </div> 
+                    <h2><div className="login2">CodePortal</div>  <div className="login1">Sign into your account.</div></h2>
+                        <form action="">
+                            <input type="text" placeholder="Email Address" className="email" required/>
+                            <input type="password" placeholder="Password" className="password" required/>
+                            <Button><span>Sign In</span></Button>
+                        </form>
+                        <div className="beauty"><h1>User</h1></div>
                 </div>
 
             </div>
@@ -72,13 +73,8 @@ overflow: hidden;
     border-radius: 5px;
     filter: drop-shadow(0px 15px 15px #181e30);
     text-align:center;
-    
     background: #202942; /* Old browsers */
 
-
-
-
-        
 }
 .login1{
     font-size:0.4em;

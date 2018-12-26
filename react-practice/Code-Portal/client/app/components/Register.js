@@ -12,15 +12,12 @@ class Register extends Component {
             <div className={this.props.className}>
                 <span id="logo">
 						<img src={iecselogo} alt="" id="logoimg" />
-					</span>
-                    <div className="alternative">
-                        <NavLink to="/login">
-                            <span>Log In</span>
-                        </NavLink>
-                        <span>Recover Account</span>
-                        <span id="google">Log in with Google</span>
-                    </div>
-                    <Registerbox/>
+				</span>
+                <Registerbox/>
+                <div className="alternative">
+                    <span>Have account already? <NavLink to="/login"><span id="signin">Sign in.</span></NavLink></span> 
+                </div>
+               
                                     
             </div>
         );
@@ -51,6 +48,9 @@ const slide1 = keyframes`
 
 
 export default styled(Register)`
+    #signin{
+        color:#fb0083;
+    }
     height:650px;
     #logo {
 		position: absolute;
@@ -87,12 +87,15 @@ export default styled(Register)`
 		-ms-user-select: none;
         user-select: none;
         animation: ${slide1} 1s 1 0s ease-in
-        :hover{
+        
+       
+    }
+    #signin>hover{
+        
             color:#fff;
             cursor:pointer;
             font-size:1em;
-        }
-       
+        
     }
     a{
         text-decoration: none;

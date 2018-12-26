@@ -9,21 +9,67 @@ class Registerbox extends Component {
         return (
             <div className={this.props.className}>
                 <div className="container">
-            
-                <h2>Sign Up for <span>CodePortal</span> </h2>
-                <form action="">
-                    
-                    <input type="text" placeholder="Name" className="name" required/>
-                    <input type="text" placeholder="Username" className="name" required/>
-                    <input type="text" placeholder="Email Address" className="email" required/>
-                    <input type="text" placeholder="Organization" className="organization" required/>
-                    <input type="password" placeholder="Password" className="password" required/>
-                    
-                    <Button><span>Sign Up</span></Button>
-                </form>
-                <div className="beauty"><h1>User</h1></div>
-                </div>
+                    <div className="hello">
 
+                    </div>
+                    <div className="hello1">
+
+                    </div>
+                    <div className="hello2">
+
+                    </div>
+                    <div className="hello3">
+
+                    </div>
+                    <div className="hello4">
+
+                    </div> 
+                    <h2><div className="login2">
+                    <span id="code">Code</span>
+                    <span id="portal">Portal</span>
+                    </div><div className="login1">Create a new account</div></h2>
+                            <form action="">
+                                <div className="data-box">
+                                    <div className="left-container">
+                                        <div className="input-container">
+                                            <i className="fa fa-user icon"></i>
+                                            <input type="text" placeholder="Name" className="name" required/>
+                                        </div>
+                                        <div className="input-container">
+                                            <i className="fa fa-user-plus icon"></i>
+                                            <input type="text" placeholder="Username" className="name" required/>
+                                        </div>
+                                        <div className="input-container">
+                                            <i className="fa fa-envelope icon"></i>
+                                            <input type="text" placeholder="Email" className="email" required/>
+                                        </div>
+                                    </div>
+                                    <div className="right-container">
+                                         <div className="image-container">
+                                            <input type="file" placeholder="Image" className="image" align="bottom" required/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="data">
+                                    <div className="input-container2">
+                                        <i className="fa fa-briefcase icon"></i>
+                                        <input type="text" placeholder="Organization" className="organization" required/>
+                                    </div>
+                                </div>
+                                <div className="data">
+                                    <div className="input-container2">
+                                        <i className="fa fa-key icon"></i>
+                                        <input type="password" placeholder="Password" className="password" required/>
+                                    </div>
+                                </div>
+
+                                <div className="data">  
+                                    <Button><span>Sign Up</span></Button>
+                                </div>
+                                
+                            </form>
+                        <div className="beauty"><h1>User</h1></div>
+                </div>
             </div>
         );
     }
@@ -57,55 +103,121 @@ overflow: hidden;
     top: 40%;  /* position the top  edge of the element at the middle of the parent */
     left: 50%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
-    width:500px;
-    height:400px;
-    border-radius: 10px;
-    
+    width:600px;
+    height:420px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 15px 15px #181e30);
     text-align:center;
-    background: #27273f; /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover, #27273f 9%, #1f1f33 100%); /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, #27273f 9%,#1f1f33 100%); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, #27273f 9%,#1f1f33 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27273f', endColorstr='#1f1f33',GradientType=1 );
-        filter: drop-shadow(0 0 0.95rem #1f2032);
-
-
-
-        
+    background: #202942; /* Old browsers */
+         
 }
-h2{
-    margin-top:20px;
-    font-weight:100;
-    letter-spacing:3px;
-        color:#dfdfe7;
-
+form{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    // background:yellow;
+    
 }
-h2>span{
+.data-box{
+    
+    width:100%;
+    display:flex;
+    flex-direction:row;
+}
+.data{
+    // background:red;
+    width:100%;
+}
+.login1{
+    font-size:0.6em;
     font-weight:400;
-    letter-spacing:normal;
+    letter-spacing:3px;
+    color:#dfdfe7;
+
 }
-.email,.password,.name,.organization{
-    display:block;
+.login2{
+    font-size:1.2em;
+    margin-top:10px;
+    font-weight:600;
+    color:#dfdfe7;
+}
+.input-container{
+    margin-left:65px;
+    margin-top:20px;
+    display:flex;
+    flex-direction:row;
+    // width:100%;
+    // background:red;
+    height:35px;
+    
+   
+}
+.image-container{
+    margin-top:20px;
+    margin-left:10px;
+    display:flex;
+    flex-direction:row;
+   
+    width:200px;
+    background-opacity:0.5;
+    text-align:center;
+    
+}
+.left-container{
+    // background:green;
+    width:60%;
+}
+.right-container{
+    // background:yellow;
+    width:40%;
+}
+.input-container2{
+    margin-left:65px;
+    margin-top:20px;
+    display:flex;
+    flex-direction:row;
+    width:85%;
+    // background:yellow;
+    height:35px;
+    background-opacity:0.5;
+}
+.icon {
+    padding: 10px;
+    color: white;
+    width: 50px;
+    text-align: center;
+    background:#303a5a;
+    margin-right:5px;
+    border-radius:4px;
+}
+input[type=file]{
+    // background:red;
+    height:145px;
+}
+.email,.password,.name,.organization,.image{
+    
+    padding:10px;
+    outline: none;
     animation: ${test1} 1.2s 1 0.2s ease-out forwards;
+    font-weight:500;
     color:#fff;
     border: 0px;
+    border-radius: 4px;
     box-shadow: none;
-    outline: none;
     -webkit-appearance:none ;
     -moz-appearance:none ;
     appearance:none ;
-    height:35px;
-    margin-top:20px;
-    margin-left:38px;
     border:none;
     text-indent: 10px;
-    background: rgba(255,255,255,0);
-    border-bottom: 1px solid rgba(223,223,231,0.5);
-    
+    background: #272f49;
 }
-.password{
-    margin-top:10px;
+#code{
+    color:white;
 }
+#portal{
+    color: #6f7eb2;
+}
+
 
 input::-webkit-input-placeholder{
     color: rgba(223,223,231,0.6);
@@ -121,8 +233,9 @@ button{
     padding:10px;
     padding-top:7px;
     border:none;
-    border-radius:5px;
-    transition:0.4s;;
+    border-radius:20px;
+    transition:0.4s;
+    filter: drop-shadow(0px 5px 3px #1d243a);
     :hover{
         width:80%;
         background:#a94cf2;
@@ -130,7 +243,8 @@ button{
     }
 }
 button>span{
-    font-size:1.2em;
+    font-size:1em;
+    font-weight:600;
 }
 .beauty{
     -webkit-touch-callout: none;
@@ -146,6 +260,62 @@ button>span{
     font-size:80px;
     position:absolute;
     opacity:0.015;
+}
+
+.hello{
+    z-index:1;
+    left:0px;
+    width:20%;
+    height:3px;
+    background:#fb0083;
+    position:absolute;
+
+
+    
+}
+.hello1{
+    z-index:1;
+    left:20%;
+    width:20%;
+    height:3px;
+    background:#4bdc7c;
+    position:absolute;
+    color:white;
+
+
+}
+.hello2{
+    z-index:1;
+    left:40%;
+    width:20%;
+    height:3px;
+    background:#b14aee;
+    position:absolute;
+    color:white;
+
+
+}
+.hello3{
+    z-index:1;
+    left:60%;
+    width:20%;
+    height:3px;
+    background:#f6c760;
+    position:absolute;
+    color:white;
+
+
+}
+.hello4{
+    z-index:1;
+    left:80%;
+    width:20%;
+    height:3px;
+    background:#6a93ff;
+    position:absolute;
+    color:white;
+
+
 }
 
 
