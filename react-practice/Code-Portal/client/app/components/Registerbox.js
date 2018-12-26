@@ -27,7 +27,7 @@ class Registerbox extends Component {
                     <h2><div className="login2">
                     <span id="code">Code</span>
                     <span id="portal">Portal</span>
-                    </div><div className="login1">Create a new account</div></h2>
+                    </div><div className="login1">Create a new account.</div></h2>
                             <form action="">
                                 
                                 <div className="input-container">
@@ -95,7 +95,7 @@ overflow: hidden;
     top: 40%;  /* position the top  edge of the element at the middle of the parent */
     left: 50%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
-    width:600px;
+    width:400px;
     height:420px;
     border-radius: 5px;
     filter: drop-shadow(0px 15px 15px #181e30);
@@ -118,7 +118,7 @@ overflow: hidden;
     color:#dfdfe7;
 }
 .input-container{
-    margin-left:65px;
+    margin-left:35px;
     margin-top:20px;
     display:flex;
     flex-direction:row;
