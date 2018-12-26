@@ -96,7 +96,7 @@ overflow: hidden;
     left: 50%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
     width:400px;
-    height:420px;
+    height:450px;
     border-radius: 5px;
     filter: drop-shadow(0px 15px 15px #181e30);
     text-align:center;
